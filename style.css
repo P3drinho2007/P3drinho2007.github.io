@@ -1,0 +1,830 @@
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+  }
+  
+  header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    font-family: "Arial Black", Arial, sans-serif;
+  }
+  
+  header:before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: linear-gradient(to right, #000 0%, #000 30%, #fff 30%, #fff 70%, #000 70%, #000 100%);
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 36px;
+    color: #fff;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  h2 {
+    margin-top: 0;
+    font-size: 28px;
+    color: #000;
+    font-family: "Times New Roman", Times, serif;
+  }
+  
+  p {
+    line-height: 1.5;
+    font-size: 16px;
+    color: #000;
+  }
+  
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .decoration {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .decoration img {
+    width: 80px;
+  }
+  
+  .decoration-branch {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background-color: #8b572a;
+    transform: rotate(-3deg);
+    z-index: -1;
+  }
+  
+  .decoration-wood {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background-color: #4d2600;
+    z-index: -1;
+  }
+  
+  .profile-picture {
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+  }
+  
+  .page {
+    display: none;
+  }
+  
+  .show-page {
+    display: block;
+  }
+  
+  #page-navigation {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #page-navigation button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+  }
+  
+  header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    font-family: "Arial Black", Arial, sans-serif;
+  }
+  
+  header:before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: linear-gradient(to right, #000 0%, #000 30%, #fff 30%, #fff 70%, #000 70%, #000 100%);
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 36px;
+    color: #fff;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8ecec00;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  h2 {
+    margin-top: 0;
+    font-size: 28px;
+    color: #000;
+    font-family: "Times New Roman", Times, serif;
+  }
+  
+  p {
+    line-height: 1.5;
+    font-size: 16px;
+    color: #000;
+  }
+  
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .decoration {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .decoration img {
+    width: 80px;
+  }
+  
+  .decoration-branch {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background-color: #8b572a;
+    transform: rotate(-3deg);
+    z-index: -1;
+  }
+  
+  .decoration-wood {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background-color: #4d2600;
+    z-index: -1;
+  }
+  
+  .cover {
+    position: relative;
+    text-align: center;
+  }
+  
+  .profile-picture-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .profile-picture:hover + .profile-picture-overlay {
+    opacity: 1;
+  }
+  
+  .profile-picture {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+  }
+  
+  .profile-picture:hover {
+    transform: scale(1.1);
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .profile-title {
+    position: relative;
+    z-index: 2;
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .profile-picture:hover + .profile-title {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .show-page {
+    display: block;
+  }
+  
+  #page-navigation {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #page-navigation button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .like-button {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .like-button button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .like-button button:hover {
+    transform: scale(1.1);
+  }
+  /* style.css */
+
+/* Efeito de transição suave nos botões da página de navegação */
+#page-navigation button {
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  #page-navigation button:hover {
+    background-color: #333;
+    color: white;
+  }
+  
+  /* Efeito de zoom na imagem do perfil ao passar o mouse */
+  .profile-picture {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .profile-picture:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Efeito de movimento sutil nos elementos das páginas */
+  .page {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+  .show-page {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .fade-in.show {
+    opacity: 1;
+  }
+  .slide-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+  .slide-up.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .page-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .page-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #bbb;
+    margin: 0 6px;
+    cursor: pointer;
+  }
+  
+  .page-indicator.active {
+    background-color: #333;
+  }
+  /* style.css */
+
+@keyframes particleAnimation {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) scale(0);
+      opacity: 0;
+    }
+  }
+  
+  
+  /* style.css */
+
+
+  
+  .contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-item img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .contact-item p {
+    margin-top: 10px;
+  }
+  
+  .contact-separator {
+    width: 1px;
+    height: 50px;
+    background-color: #bbb;
+    margin: 0 20px;
+  }
+  .contact-info {
+    justify-content: center;
+    align-items: center;
+  }
+    @keyframes blink {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      .button-neon {
+        font-size: 18px;
+        padding: 12px 24px;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        border-radius: 30px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      
+      .button-neon:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, #ff00ff, #00ffff);
+        opacity: 0.8;
+        transition: opacity 0.3s ease-in-out;
+        z-index: -1;
+      }
+      
+      .button-neon:hover:before {
+        opacity: 1;
+      }
+      .forward-button {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+      }      
+      /* Estilos para telas menores que 768px (smartphones em modo retrato) */
+@media (max-width: 767px) {
+  header {
+    text-align: center;
+  }
+  .decoration img {
+    width: 80%;
+  }
+  .contact-info .profile-picture {
+    max-width: 150px;
+    margin: 0 auto;
+  }
+  .page {
+    padding: 20px;
+  }
+}
+
+/* Estilos para telas entre 768px e 1023px (tablets em modo retrato) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  header {
+    text-align: center;
+  }
+  .decoration img {
+    width: 60%;
+  }
+  .contact-info .profile-picture {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+  .page {
+    padding: 30px;
+  }
+}
+
+/* Estilos para telas maiores que 1023px (tablets em modo paisagem e desktops) */
+@media (min-width: 1024px) {
+  header {
+    text-align: center;
+  }
+  .decoration img {
+    width: 40%;
+  }
+  .contact-info .profile-picture {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+  .page {
+    padding: 50px;
+  }
+}
+
+/* Pseudo-elemento ::before para criar o vídeo de fundo */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("ink_-_67358 (1080p).mp4");
+  background-size: cover;
+  background-position: center;
+  animation: slowlyMove 30s linear infinite;
+  z-index: -2; /* Colocar o vídeo no fundo, atrás do conteúdo do portfólio */
+}
+
+/* Estilos para os trovões */
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body::after {
+  background: linear-gradient(transparent, whit);
+  opacity: 0;
+  animation: thunderAnimation 3s linear infinite, slowlyMove 20s linear infinite;
+  z-index: -1; /* Colocar os trovões atrás do conteúdo do portfólio */
+}
+/* Add the following CSS to remove the white background and set the video as the background image */
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+video#background-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header, main {
+  position: relative;
+  z-index: 1;
+}
+
+/* Add any additional styling you need for the header and main elements here */
+/* Add the following CSS to change the button color to purple */
+
+/* Styles for the Like button */
+.like-button button {
+  background-color: purple; /* Change to the desired purple color */
+  color: white; /* Text color (white for better contrast with purple) */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.like-button button:hover {
+  background-color: #7d48b1; /* Change to a slightly different shade when hovering */
+}
+/* Add the following CSS to change the colors of the navigation buttons to purple */
+
+#page-navigation button {
+  background-color: purple; /* Change to the desired purple color */
+  color: white; /* Text color (white for better contrast with purple) */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#page-navigation button:hover {
+  background-color: #7d48b1; /* Change to a slightly different shade when hovering */
+}
+body {
+  overflow: auto; /* or overflow: scroll; */
+}
+/* Add the following CSS to change the background color and border of the portfolio */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black; /* Set the background color to black */
+}
+
+main {
+  border: 5px solid purple; /* Set the border color and width */
+  padding: 20px; /* Add some padding to give space between the content and border */
+}
+/* Add the following CSS to change the background color and border of the portfolio */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black; /* Set the background color to black */
+}
+
+main {
+  border: 5px solid purple; /* Set the border color and width */
+  padding: 20px; /* Add some padding to give space between the content and border */
+}
+body {
+  background-color: #000000;
+  color: #ffffff; /* You can also update the text color to white if needed */
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+/* Set the background color of the "Sobre Mim" section to black */
+#page-about {
+  background-color: #000000;
+}
+/* Set the background color of the "Sobre Mim" section to black */
+#page-about {
+  background-color: #000000;
+}
+
+/* Set the text color to white for the "Sobre Mim" section */
+#page-about h2,
+#page-about p {
+  color: #ffffff;
+}
+/* Set the background color of the "Habilidades" section to black */
+#page-skills {
+  background-color: #000000;
+}
+
+/* Set the text color to white for the "Habilidades" section (optional) */
+#page-skills h2,
+#page-skills li {
+  color: #ffffff;
+}
+/* Set the background color of the "Projetos" section to black */
+#page-projects {
+  background-color: #000000;
+}
+
+/* Set the background color of the "Contatos" section to black */
+#page-contact {
+  background-color: #000000;
+}
+
+/* Set the text color to white for the "Projetos" and "Contatos" sections (optional) */
+#page-projects h2,
+#page-projects h3,
+#page-projects p,
+#page-contact h2,
+#page-contact p,
+#page-contact a {
+  color: #ffffff;
+
+}
+#page-about .contact-info {
+  text-align: center;
+}
+
+#page-about .profile-picture {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 200px; /* Adjust the width as needed */
+  height: 200px; /* Adjust the height as needed */
+}
+
+#page-about h2,
+#page-about p {
+  color: #ffffff;
+}
+/* Set the background color of the "Sobre Mim" section to purple */
+#page-about {
+  background-color: #4b0082;
+  position: relative; /* Add position relative for pseudo-element positioning */
+}
+
+/* Add a purple decoration to the background of the "Sobre Mim" section */
+#page-about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0e0615; /* Purple color for the decoration */
+  z-index: -1; /* Send the pseudo-element behind the content */
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+/* Set the background color of the "Habilidades" section to purple */
+#page-skills {
+  background-color: #4b0082;
+  position: relative; /* Add position relative for pseudo-element positioning */
+}
+
+/* Add a purple decoration to the background of the "Habilidades" section */
+#page-skills::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000; /* Purple color for the decoration */
+  z-index: -1; /* Send the pseudo-element behind the content */
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+/* Set the background color of the "Projetos" section to purple */
+#page-projects {
+  background-color: #4b0082;
+  position: relative; /* Add position relative for pseudo-element positioning */
+}
+
+/* Add a purple decoration to the background of the "Projetos" section */
+#page-projects::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0c0514; /* Purple color for the decoration */
+  z-index: -1; /* Send the pseudo-element behind the content */
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+/* Set the background color of the "Contatos" section to purple */
+#page-contact {
+  background-color: #4b0082;
+  position: relative; /* Add position relative for pseudo-element positioning */
+}
+
+/* Add a purple decoration to the background of the "Contatos" section */
+#page-contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #150a1f; /* Purple color for the decoration */
+  z-index: -1; /* Send the pseudo-element behind the content */
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+/* Outros estilos... */
+
+.feedback-section {
+  text-align: center;
+  margin-top: 50px;
+}
+/* Outros estilos... */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.feedback-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+}
+
+
+
+
+
+      
